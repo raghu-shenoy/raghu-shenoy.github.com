@@ -1,0 +1,42 @@
+body{
+    background: none repeat scroll 0 0 #1D1D1D;
+    color: #5D5D5D;
+    font: 14px sans-serif;
+    margin-top: 30px;
+}
+
+body h1{
+	margin:0;
+	padding:0;
+}
+
+div#main-content{
+	width:920px;
+	margin:auto;
+}
+
+div#content{
+	background: none repeat scroll 0 0 #FFFFFF;
+    padding: 10px;
+    width: 900px;
+    margin:auto;
+    border-radius:10px;
+}
+
+div#banner{
+	position:relative;
+}
+
+span#title{
+	background: none repeat scroll 0 0 #1D1D1D;
+    color: yellow;
+    font-size: 40px;
+    left: 25px;
+    position: absolute;
+    top: 10px;
+    -moz-box-shadow: 10px 10px 5px #777;
+}
+
+div#post-content{
+	position:relative;
+}
