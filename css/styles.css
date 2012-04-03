@@ -28,6 +28,43 @@ div#banner{
 	position:relative;
 }
 
+div#menu{
+	height:50px;
+}
+
+div.menu{
+    border-bottom: 3px solid black;
+    border-radius: 10px 10px 10px 10px;
+    border-top: 3px solid black;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.menu ul{
+    margin: 0; padding: 0;
+    float: left;
+    margin: 0 0 0 10px;
+    }    
+    
+.menu ul li{
+    display: inline;}
+    
+.menu ul li a{
+    color: black;
+    float: left;
+    padding: 10.5px 11px;
+    text-decoration: none;
+    }
+ 
+.menu ul li a:visited{
+    color: black;}
+ 
+.menu ul li a:hover, .menu ul li .current{
+    color: red;
+    background-color:black;
+    font-size:20px;
+    }
+
 span#title{
     background: none repeat scroll 0 0 #1D1D1D;
     border-radius: 10px 10px 10px 10px;
