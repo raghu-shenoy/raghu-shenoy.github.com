@@ -152,6 +152,12 @@ div#post-content div#side-content div#about-me{
     margin: 0 25px;
 }
 
+div#post-content div#side-content div#about-me ul#my-description{
+	font-size: 18px;
+    list-style: none outside none;
+    margin-left: 15px;
+}
+
 a.more{
 	float: left;
     font-size: 15px;

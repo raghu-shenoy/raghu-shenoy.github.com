@@ -1,0 +1,156 @@
+---
+layout: default
+title: bloGIT
+heading: GIT - I am not abusing, I am distributing.
+---
+<div style="text-align: justify;">
+"I'm an egotistical bastard, and I name all my projects after myself. First Linux, now git."-<i>Linus Torvalds</i></div>
+</blockquote>
+<blockquote class="tr_bq">
+<div style="text-align: justify;">
+(Note that Torvalds did not in fact name Linux.)</div>
+</blockquote>
+<div style="text-align: justify;">
+
+That's what Linus Torvalds, the developer of Linux and Git had to say when he was asked why did he name the free, fast and efficient <a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank">Version Control System</a>(VCS), which he developed, as GIT&nbsp;.
+
+<u>The Reason</u></div>
+<div style="text-align: justify;">
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+I guess most of us have worked with VCS at some point or the other. I had previously worked with a&nbsp;Subversion client to collaborate code with my team mates. In the beginning we ate up a lot of each others code(due to bad commits) as all of us where pretty new to the concept of VCS. There were a lot of sparks flying around and a lot of over writes being swept under the carpet. Finally we had a sit down with our boss who then gave us a crash course on &nbsp;how to "diff" files before a&nbsp;commit, how to check out and so on. Things went on pretty well after that. 
+But the biggest problem(Guilty Pleasure) which I found working with SVN was the <a href="http://en.wikipedia.org/wiki/Bottleneck" target="_blank">Bottleneck</a>. Now in the SVN case, the "<u>single</u>"&nbsp;server was the bottle neck, the single point of failure. The server goes kaput the team goes on a tea break,sometimes&nbsp;a very&nbsp;long break. By kaput I mean the network goes down or some other&nbsp;similar problem due to which the code is temporarily&nbsp;not&nbsp;reachable. But say the code goes KAPUT(fried), and you have not backed up the data you as well might go and find a quiet corner to cry.
+
+<u>The Solution</u></div>
+</div>
+<div style="text-align: justify;">
+Therefore when I realised this issue(I don't wanna be a cry baby) I started looking around for some options. It was at this point I came across GIT. The <b><u>DISTRIBUTED</u></b> CVS. This looked to me as the second coming because,&nbsp;</div>
+<div style="text-align: justify;">
+<ul>
+<li>Git is distributed.This means&nbsp;there are so many repositories that even if 1 fails,even if it is&nbsp;the sole remote repository hosted on github.com,&nbsp;I can still retrieve it from some other machine or my own machine&nbsp;and continue working. No more crying!</li>
+<li>The reason why there are so many repositories is because every&nbsp;machine handling that repository has once local repository. Yes you heard it right. No more network lag. This also means you can still work on git while you are offline and&nbsp;commit code to your local directory in case you have no access to the Internet/intranet.&nbsp;</li>
+</ul>
+</div>
+<div style="text-align: left;">
+These were some of the reasons why I temporarily&nbsp;put aside learning the beauty of UNIX as my primary focus and started off with understanding GIT. In case you want to try out git you can follow these steps</div>
+<ol style="text-align: left;">
+<li><div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: justify;">
+The first thing you need to do is register yourself at <a href="https://github.com/">https://github.com/</a>. The best part is its free*(How much we all love this term.This truly is the barrier breaker among cultures). 
+*<span style="font-size: xx-small;">At least the public repositories</span>.[And how we hate the fine print]</div>
+</li>
+<li><div style="text-align: justify;">
+Once you have signed up <span style="font-family: inherit;">you'll</span> be directed to a page which will explain to you in detail how to go about setting up your very own repository(both local and remote),&nbsp;the basic transactions between the local repository and&nbsp;the remote repository such as committing,pushing and fetching code.</div>
+</li>
+</ol>
+<div style="text-align: left;">
+&nbsp;One thing to be noted here before you actually start playing around with the repository you need to understand the whole procedure of how GIT works.</div>
+<div style="text-align: left;">
+In git a file has to go through a few states before it is actually safe,</div>
+<div style="text-align: left;">
+<ul style="text-align: left;">
+<li>When you create a new file it will&nbsp;be un-tracked.&nbsp;This means git just knows a file is present in the local working directory which it was previously unaware of.</li>
+<li>You then have to "<u>add</u>" the file to the Git which is like saying, "OK Mr. Git please mark and add this file so that when I commit, this particular file also gets committed."</li>
+<li>Then there's a "<u>commit</u>". This means you have committed your files to the local repository and you are safe.</li>
+<li style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">Finally you can push all your committed files to the remote repository and share with everyone your amazing piece of code.</li>
+</ul>
+</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+You can get a more detailed explanation here :&nbsp;<a href="http://progit.org/book/ch1-3.html" target="_blank">Git Basics</a></div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+
+The other amazing thing about git is branching. With branching you can totally freak out on the code because you can branch out from the main code and all the changes you put in will be local to your branch and you wont be messing up any&nbsp;code written currently by others. Branching takes very less system resources in terms of space and also the time required for creating it. </div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+I went on to try all the basic git commands such as </div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+<ul>
+<li>add</li>
+<li>commit</li>
+<li>push</li>
+<li>branch</li>
+<li>checkout</li>
+<li>remote</li>
+</ul>
+</div>
+My suggestion is that you need to first get comforatble with the whole concept of the different file statges.
+I along with my friends set up&nbsp;a team repository. And as they say too many cooks spoil the broth. And thus came along the merge conflicts from all of our constant tinkering. I learnt to resolve the conflicts(Wish I could say that about my relationship with some of my relatives.)
+For a GUI guy like me it just took a short while to get comfortable&nbsp;working on a terminal for a few days. Well that's not something I can brag about because I am still taking small baby (command) steps.
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+The steps to set up Git is well documented at github.But I would like to share some errors which I encountered when I tried to setup Git&nbsp;for the first time&nbsp;and the solutions for them,</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+
+</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; text-align: left;">
+1. My first newbie mistake: <b>Repository not found</b></div>
+<div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none; clear: both; text-align: center;">
+<a href="http://1.bp.blogspot.com/-OBZbvP5Yt1E/T0YY8wVo70I/AAAAAAAAABc/Y3n6dKWAHQE/s1600/no_repo_error.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="124" lda="true" src="http://1.bp.blogspot.com/-OBZbvP5Yt1E/T0YY8wVo70I/AAAAAAAAABc/Y3n6dKWAHQE/s640/no_repo_error.jpg" width="640" /></a></div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+
+</div>
+</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+&nbsp; &nbsp;I spent quite some time figuring this one out.&nbsp;Ensure that the&nbsp;name&nbsp;of the remote repository &nbsp;and the local working directory are the same. Now there's a git working on GIT.
+
+2. The other one- <b>error : 403</b></div>
+</div>
+<div style="text-align: justify;">
+<div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://2.bp.blogspot.com/-vuP20HFafKE/T0Ybd-ce6QI/AAAAAAAAABk/QrxZIEa1yOs/s1600/403_error.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="143" lda="true" src="http://2.bp.blogspot.com/-vuP20HFafKE/T0Ybd-ce6QI/AAAAAAAAABk/QrxZIEa1yOs/s640/403_error.jpg" width="640" /></a></div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+
+<div>
+</div>
+</div>
+</div>
+<div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+<u>Two Reasons</u>
+Your credentials are wrong.Try entering the correct credentials.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; OR
+When you cloned a particular repository you copied the url which I have encircled in the image below.<a href="http://1.bp.blogspot.com/-7CP4QriTHkE/T0YeFHdQuTI/AAAAAAAAABs/7HA9Jj-5lZg/s1600/http_error.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="280" lda="true" src="http://1.bp.blogspot.com/-7CP4QriTHkE/T0YeFHdQuTI/AAAAAAAAABs/7HA9Jj-5lZg/s640/http_error.jpg" width="640" /></a></div>
+</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+
+<div>
+</div>
+If that is the case then either you can do a fresh clone from the repository. If you think that's not a feasible option then you can probably remove the remote and then add a new remote&nbsp;having the&nbsp;statement which you obtained at the encircled region in the image below. This also means you need not provide credentials everytime you push.
+
+<div>
+</div>
+<a href="http://3.bp.blogspot.com/-ewpJgC9JvYM/T0Yg40GhKPI/AAAAAAAAAB0/DI6Nngn1-ag/s1600/http_error_solution.jpg" imageanchor="1" style="clear: left; cssfloat: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="280" lda="true" src="http://3.bp.blogspot.com/-ewpJgC9JvYM/T0Yg40GhKPI/AAAAAAAAAB0/DI6Nngn1-ag/s640/http_error_solution.jpg" width="640" /></a></div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+</div>
+<div>
+</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+You can use the following command to remove the remote repository:</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+<ul>
+<li>git remove rm origin</li>
+</ul>
+</div>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+For those of who are contemplating of whether to move on to git or not I suggest you to go through some of the links below.</div>
+<ul>
+<li><div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+<a href="http://progit.org/book/">http://progit.org/book/</a></div>
+</li>
+<li><div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+<a href="http://learn.github.com/p/intro.html">http://learn.github.com/p/intro.html</a></div>
+</li>
+<li><div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+<a href="http://pragprog.com/screencasts/v-jwsceasy/source-control-made-easy">http://pragprog.com/screencasts/v-jwsceasy/source-control-made-easy</a></div>
+</li>
+</ul>
+<div style="border-bottom: medium none; border-left: medium none; border-right: medium none; border-top: medium none;">
+</div>
+<div>
+But as for me git is the way to go.Git is Fit.</div>
+</div>

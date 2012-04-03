@@ -1,0 +1,17 @@
+---
+layout: default
+---
+ 
+
+{% for post in site.posts %}
+	
+<div class='main-content-header'>
+	<span class='main-underline-header'> </span>
+	<h2><span class='align'>{{post.heading}}</span>
+</div>
+<div id='main-content-text'>
+	{{content}}
+</div>
+
+ 
+{% endfor %}
