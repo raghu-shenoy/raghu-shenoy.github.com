@@ -120,12 +120,14 @@ div#post-content div#main-content div.main-content-header .main-underline-header
     width: 545px;
 }
 
-div#post-content div#main-content div#main-content-text{
-    line-height:18px;
-	font-size:12px;
-	color:#111111;
-	float:left;
-	width:545px;
+div#post-content div#main-content div.main-content-text{
+    color: #111111;
+    float: left;
+    font-size: 12px;
+    height: 350px;
+    line-height: 18px;
+    overflow: hidden;
+    width: 545px;
 }
 
 div#post-content div#side-content div.side-content-header span.align{
