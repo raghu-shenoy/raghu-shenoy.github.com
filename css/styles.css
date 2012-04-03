@@ -10,7 +10,7 @@ body h1,h2,h3{
 	padding:0;
 }
 
-div#main-content{
+div#all-content{
 	width:920px;
 	margin:auto;
 }
@@ -51,29 +51,30 @@ div#post-content{
 
 div#post-content div#side-content{
     float: left;
-    margin-left: 65px;
     min-height: 500px;
     width: 250px;
+	margin-left: 15px;
 }
 div#post-content div#main-content{
     float: left;
     margin: 0 10px;
     min-height: 500px;
     width: 550px;
+	margin-left: 75px;
 }
 
-div#post-content div#main-content div#main-content-header{
+div#post-content div#main-content div.main-content-header{
     color: #444;
     float: left;
     height: 85px;
 }
 
-div#post-content div#main-content div#main-content-header span.align{
+div#post-content div#main-content div.main-content-header span.align{
    float: left;
    margin:10px;
 }
 
-div#post-content div#main-content div#main-content-header span.main-underline-header{
+div#post-content div#main-content div.main-content-header .main-underline-header{
     background-image: url("../images/underline.png");
     background-repeat: repeat-x;
     float: left;
@@ -88,12 +89,12 @@ div#post-content div#main-content div#main-content-text{
 	float:left;
 }
 
-div#post-content div#side-content div#side-content-header span.align{
+div#post-content div#side-content div.side-content-header span.align{
    float: left;
    margin:10px;
 }
 
-div#post-content div#side-content div#side-content-header span.side-underline-header{
+div#post-content div#side-content div.side-content-header span.side-underline-header{
     background-image: url("../images/underline.png");
     background-repeat: repeat-x;
     float: left;
@@ -101,7 +102,7 @@ div#post-content div#side-content div#side-content-header span.side-underline-he
     width: 250px;
 }
 
-div#post-content div#side-content div#side-content-header{
+div#post-content div#side-content div.side-content-header{
     color: #444;
     float: left;
     height: 85px;

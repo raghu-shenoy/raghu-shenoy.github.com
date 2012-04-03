@@ -1,44 +1,70 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
-<head>
-<link rel="stylesheet" href="./css/styles.css" />
-<title>{{ page.title }}</title>
-</head>
-<body>
-<div id='main-content'>
-		<div id='content'>
-			<div id='banner'>
-				<span id='title'><h1>blo<span style='color:red'>GIT</span></h1></span>
-				<img src="../images/banner.png" alt="banner" height="250" width="900" />				
-			</div>
-			<div id='post-content'>
-				<div id='main-content'>
-					<div id='main-content-header'>
-						<span class='main-underline-header'></span>
-						<span class='align'><h2>The fabled Black-Ness Monster</h2></span>
-						<span class='main-underline-header'></span>
-					</div>
-					<div id='main-content-text'>
-						{{ content }}
-					</div>
-				</div>			
-				<div id='side-content'>
-					<div id='side-content-header'>
-						<span class='side-underline-header'></span>
-						<span class='align'><h2>About Me</h2></span>
-						<span class='side-underline-header'></span>
-					</div>
-					<div id='about-me'>
-						<img width="200" height="200" alt="banner" src="../images/myphoto.png">
-						<ul id='list-description'>
-							<li>Seeker</li>
-							<li>Developer</li>
-							<li>Gamer</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-</div>
-</body>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
+    <link rel="stylesheet" href="../css/styles.css" type="text/css">
+    <title>
+      {{ page.title }}
+    </title>
+  </head>
+  <body>
+    <div id='all-content'>
+      <div id='content'>
+        <div id='banner'>
+          <h1>
+            <span id='title'>blo<span style='color:red'>GIT</span></span>
+          </h1><img src="../images/banner.png" alt="banner" height="250" width=
+          "900">
+        </div>
+        <div id='post-content'>
+          <div id='side-content'>
+            <div class='side-content-header'>
+              <span class='side-underline-header'> </span>
+              <h2>
+                <span class='align'>About Me</span>
+              </h2><span class='side-underline-header'> </span>
+            </div>
+            <div id='about-me'>
+              <img width="200" height="200" alt="banner" src=
+              "../images/myphoto.png">
+              <ul id='my-description'>
+                <li>Seeker
+                </li>
+                <li>Developer
+                </li>
+                <li>Gamer
+                </li>
+              </ul>
+            </div>
+			<div class='side-content-header'>
+              <span class='side-underline-header'> </span>
+              <h2>
+                <span class='align'>Archives</span>
+              </h2><span class='side-underline-header'> </span>
+            </div>
+			<ul id='archives'>
+                <li><a href='#'>The fabled Black-Ness Monster</a>
+                </li>
+                <li>Developer
+                </li>
+                <li>Gamer
+                </li>
+              </ul>
+          </div>
+		  <div id='main-content'>
+            <div class='main-content-header'>
+              <span class='main-underline-header'> </span>
+              <h2>
+                <span class='align'>{{ page.heading }}</span>
+              </h2><span class='main-underline-header'> </span>
+            </div>
+            <div id='main-content-text'>
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
