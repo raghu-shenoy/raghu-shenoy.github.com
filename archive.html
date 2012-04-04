@@ -3,16 +3,17 @@ layout: archiveLayout
 title: bloGIT
 ---
  
-
-{% for post in site.posts %}
-	
-<div class='main-content-header'>
-	<span class='main-underline-header'> </span>
-	<h2><span class='align'>{{post.heading}}</span>
+ <div id="accordion">
+	{% for post in site.posts %}
+		<div>
+			<h3><a href="#">{{post.heading}}</a></h3>
+			<div>
+				<div class='main-content-text'>
+					{{post.content}}				
+				</div>
+				<a href={{post.url}} class="more"></a>
+				<!--<button class='expand'>More</button>-->
+			</div>	
+		</div>		
+	{% endfor %}
 </div>
-<div class='main-content-text'>
-	{{post.content}}
-</div>
-<a href={{post.link}} class='more'>(--more--)</a>
- 
-{% endfor %}
