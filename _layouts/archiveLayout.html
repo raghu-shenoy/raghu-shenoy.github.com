@@ -10,8 +10,19 @@
 	<script type="text/javascript">
 			$(function(){
 				// Accordion
-				$("#accordion").accordion({ header: "h3" });
-				$( ".more" ).button({ icons: {primary:'ui-icon-triangle-1-s'} });
+				$("#accordion").accordion({ header: "h3",collapsible: true });
+				$( "button.expand" ).click(function(){
+					$( "button.expand" ).eq(0).prev().css('height','auto');
+					});
+				var clickAccordion = $( ".expand" ).accordion({ event: 'click' });
+				clickAccordion.to
+
+				$( ".expand" ).button({ icons: {primary:'ui-icon-triangle-1-s'} });
+				//getter
+				var autoHeight = $( "#accordion").accordion( "option", "autoHeight" );
+				//setter
+				$( "#accordion").accordion( "option", "autoHeight", false );	
+				textNode = $("#accordion").find('.ui-state-active').siblings().find('.main-content-text')		
 			});
 	</script>
     <title>
