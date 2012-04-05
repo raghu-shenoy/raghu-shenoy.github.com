@@ -1,12 +1,12 @@
 ---
-layout: archiveLayout
+layout: maincontent
 title: bloGIT
 ---
  
  <div id="accordion">
 	{% for post in site.posts %}
 		<div class='blog-snippet'>
-			<h3><a href="#">{{post.heading}}</a></h3>
+			<h4><a href="#">{{post.heading}}</a></h4>
 			<div>
 				<div class='main-content-text'>
 					{{post.content}}				
@@ -15,5 +15,4 @@ title: bloGIT
 			</div>	
 		</div>		
 	{% endfor %}
-	
 </div>

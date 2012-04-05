@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div id='side-content'>
+	<div class='side-content-header'>
+		<h2>
+			<span class='align'>Archives</span>
+		</h2>
+	</div>				
+	<div id="post-menu">
+	<h4><a href="#">2012</a></h4>		
+		<div class='post-menu-content'>		
+			<ul id='post-menu-list'>
+				{% for post in site.posts %}			
+					<li><a href={{post.url}}>{{post.heading}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+{{content}}

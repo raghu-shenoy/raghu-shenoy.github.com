@@ -89,8 +89,8 @@ div#post-content div#side-content{
     float: left;
     min-height: 500px;
     width: 250px;
-	margin-left: 15px;
 }
+
 div#post-content div#main-content{
     float: left;
     margin: 0 10px 0 25px;
@@ -126,8 +126,8 @@ div#post-content div#main-content div.main-content-text{
 }
 
 div#post-content div#side-content div.side-content-header span.align{
-   float: left;
-   margin:10px;
+    float: left;
+    margin: 5px 0 0 20px;
 }
 
 div#post-content div#side-content div.side-content-header span.side-underline-header{
@@ -139,8 +139,10 @@ div#post-content div#side-content div.side-content-header span.side-underline-he
 }
 
 div#post-content div#side-content div.side-content-header{
-    color: #444;
-    height: 85px;
+    background: none repeat scroll 0 0 yellow;
+    border-radius: 10px 10px 10px 10px;
+    color: black;
+    height: 40px;
 }
 
 div#post-content div#side-content div#about-me{
@@ -159,8 +161,7 @@ a.more{
     text-decoration: none;
 }
 
-div#disqus-content
-{
+div#disqus-content{
 	margin:10px 0;
 	float:left;
 	width: 900px;
@@ -195,4 +196,6 @@ div#disqus-content
 
 ul#post-menu-list li a{
 	text-decoration: none;
+}
+h3.accordion-header{
 }

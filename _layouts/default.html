@@ -4,6 +4,21 @@
     <meta name="generator" content=
     "HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
     <link rel="stylesheet" href={{site.css_path}} type="text/css">
+    <link type="text/css" href={{site.javascript_path | append:'jquery-ui/css/custom-theme/jquery-ui-1.8.18.custom.css'}} rel="stylesheet" />
+	<script type="text/javascript" src={{site.javascript_path | append:'jquery-ui/js/jquery-1.7.1.min.js' }}></script>
+	<script type="text/javascript" src={{site.javascript_path | append:'jquery-ui/js/jquery-ui-1.8.18.custom.min.js'}}></script>
+	<script type="text/javascript">
+			$(function(){
+				// Accordion
+				$("#accordion").accordion({ header: "h4",collapsible: true, autoHeight: false,animated: 'bounceslide',active: false  });
+				$( "a.expand" ).button({ icons: {primary:'ui-icon-triangle-1-s'} });
+				$("#post-menu h4").click(function() {
+				$(this).next().toggle();
+				return false;
+				}).next().hide();
+				$('#post-menu-list li:nth-child(odd)').addClass('alternate');
+			});
+	</script>
     <title>
       {{ page.title }}
     </title>
@@ -28,54 +43,24 @@
 			</div>
 		</div>
         <div id='post-content'>
-          <div id='side-content'>
-            <div class='side-content-header'>
-              <span class='side-underline-header'> </span>
-              <h2>
-                <span class='align'>About Me</span>
-              </h2><span class='side-underline-header'> </span>
-            </div>
-            <div id='about-me'>
-              <img width="200" height="200" alt="banner" src=
-              "../images/myphoto.png">
-              <ul id='my-description'>
-                <li>Seeker
-                </li>
-                <li>Developer
-                </li>
-                <li>Gamer
-                </li>
-              </ul>
-            </div>
-			<div class='side-content-header'>
-              <span class='side-underline-header'> </span>
-              <h2>
-                <span class='align'>Archives</span>
-              </h2><span class='side-underline-header'> </span>
-            </div>
-			<ul id='archives'>
-				<li><a href='http://raghu-shenoy.github.com/archives/javascript.html'>Make my web page Dance</a>
-                </li>
-                <li><a href='http://raghu-shenoy.github.com/archives/htmlcss.html'>Hyper Text Markup(Moody???) Language</a>
-                </li>
-                <li><a href='http://raghu-shenoy.github.com/archives/git.html'>GIT - I am not abusing, I am distributing.</a>
-                </li>
-                <li><a href='http://raghu-shenoy.github.com/archives/lochness.html'>The fabled Black-Ness Monster</a>
-                </li>
-             </ul>
-          </div>
-		  <div id='main-content'>
-            <div class='main-content-header'>
-              <span class='main-underline-header'> </span>
-              <h2>
-                <span class='align'>{{ page.heading }}</span>
-              </h2><span class='main-underline-header'> </span>
-            </div>
-            <div id='main-content-text'>
-              {{ content }}
-            </div>
-          </div>
+			{{content}}
         </div>
+        <div id='disqus-content'>
+			<div id="disqus_thread"></div>
+				<script type="text/javascript">
+					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+					var disqus_shortname = 'seekersblog'; // required: replace example with your forum shortname
+
+					/* * * DON'T EDIT BELOW THIS LINE * * */
+					(function() {
+						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>      
+		  </div>
       </div>
     </div>
   </body>

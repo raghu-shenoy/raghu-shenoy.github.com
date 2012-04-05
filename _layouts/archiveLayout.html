@@ -43,27 +43,77 @@
 			</div>
 		</div>
         <div id='post-content'>
-          <div id='side-content'>
-			<div class='side-content-header'>
-              <span class='side-underline-header'> </span>
-              <h2>
-                <span class='align'>Archives</span>
-              </h2><span class='side-underline-header'> </span>
-            </div>				
-			<div id="post-menu">
-				<h4><a href="#">2012</a></h4>		
-				<div class='post-menu-content'>		
-					<ul id='post-menu-list'>
-						{% for post in site.posts %}			
-							<li><a href={{post.url}}>{{post.heading}}</a></li>
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-          </div>
-		  <div id='main-content'>
-			{{content}}
+
+
+        </div>
+        <div id='disqus-content'>
+			<div id="disqus_thread"></div>
+				<script type="text/javascript">
+					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+					var disqus_shortname = 'seekersblog'; // required: replace example with your forum shortname
+
+					/* * * DON'T EDIT BELOW THIS LINE * * */
+					(function() {
+						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>      
 		  </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
+    <link rel="stylesheet" href={{site.css_path}} type="text/css">
+    <link type="text/css" href={{site.javascript_path | append:'jquery-ui/css/custom-theme/jquery-ui-1.8.18.custom.css'}} rel="stylesheet" />
+	<script type="text/javascript" src={{site.javascript_path | append:'jquery-ui/js/jquery-1.7.1.min.js' }}></script>
+	<script type="text/javascript" src={{site.javascript_path | append:'jquery-ui/js/jquery-ui-1.8.18.custom.min.js'}}></script>
+	<script type="text/javascript">
+			$(function(){
+				// Accordion
+				$("#accordion").accordion({ header: "h3",collapsible: true, autoHeight: false,animated: 'bounceslide',active: false  });
+				$( "a.expand" ).button({ icons: {primary:'ui-icon-triangle-1-s'} });
+				$("#post-menu h4").click(function() {
+				$(this).next().toggle();
+				return false;
+				}).next().hide();
+				$('#post-menu-list li:nth-child(odd)').addClass('alternate');
+			});
+	</script>
+    <title>
+      {{ page.title }}
+    </title>
+  </head>
+  <body>
+    <div id='all-content'>
+      <div id='content'>
+        <div id='banner'>
+          <h1>
+            <span id='title'>blo<span style='color:red'>GIT</span></span>
+          </h1><img src={{site.img_path | append:'banner.png' }} alt="banner" height="250" width=
+          "900">
+        </div>
+        <div id='menu'>
+			<div class="menu">
+				<ul id='main-nav'>
+				<li><a href="http://raghu-shenoy.github.com">Home</a></li>
+				<li><a href="http://raghu-shenoy.github.com/archive.html">Archives</a></li>
+				<li><a href="#">About Me</a></li>
+				</ul>
+				<br style="clear:left"/>
+			</div>
+		</div>
+        <div id='post-content'>
+
+
         </div>
         <div id='disqus-content'>
 			<div id="disqus_thread"></div>
