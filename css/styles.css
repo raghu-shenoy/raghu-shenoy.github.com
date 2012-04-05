@@ -33,9 +33,8 @@ div#menu{
 }
 
 div.menu{
-    border-bottom: 3px solid black;
     border-radius: 10px 10px 10px 10px;
-    border-top: 3px solid black;
+    background: black;
     margin: 20px 0;
     width: 100%;
 }
@@ -51,19 +50,18 @@ div.menu{
     }
     
 .menu ul li a{
-    color: black;
+    color: white;
     float: left;
     padding: 10.5px 11px;
     text-decoration: none;
     }
  
 .menu ul li a:visited{
-    color: black;}
+    color: white;}
  
 .menu ul li a:hover, .menu ul li .current{
     color: red;
     background-color:black;
-    font-size:20px;
     }
 
 span#title{
@@ -95,10 +93,8 @@ div#post-content div#side-content{
 }
 div#post-content div#main-content{
     float: left;
-    margin: 0 10px;
-    min-height: 500px;
-    width: 550px;
-	margin-left: 75px;
+    margin: 0 10px 0 25px;
+    width: 600px;
 }
 
 div#post-content div#main-content div.main-content-header{
@@ -121,12 +117,12 @@ div#post-content div#main-content div.main-content-header .main-underline-header
 }
 
 div#post-content div#main-content div.main-content-text{
-    color: #111111;
+    color: #FFFFFF;
     font-size: 12px;
-    height: 350px;
-    line-height: 18px;
+    height: 330px;
+    line-height: 2em;
     overflow: hidden;
-    width: 496px;
+    width: 525px;
 }
 
 div#post-content div#side-content div.side-content-header span.align{
@@ -144,7 +140,6 @@ div#post-content div#side-content div.side-content-header span.side-underline-he
 
 div#post-content div#side-content div.side-content-header{
     color: #444;
-    float: left;
     height: 85px;
 }
 
@@ -173,6 +168,31 @@ div#disqus-content
 
 .expand{
 	font-size: 10px !important;
-	margin: 4px 0 0 220px;
+	margin: 8px 0 0 220px;
 }
 
+.post-menu-content{
+	font-size: 12px !important;
+}
+
+.blog-snippet{
+	margin-bottom: 10px;
+}
+
+#post-menu h6{
+	font-size: 10px;
+}
+
+.post-menu-content ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}	
+
+.alternate{
+	margin: 10px 0;
+}
+
+ul#post-menu-list li a{
+	text-decoration: none;
+}

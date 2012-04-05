@@ -4,25 +4,19 @@
     <meta name="generator" content=
     "HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
     <link rel="stylesheet" href={{site.css_path}} type="text/css">
-    <link type="text/css" href={{site.javascript_path | append:'jquery-ui/css/smoothness/jquery-ui-1.8.18.custom.css'}} rel="stylesheet" />	
+    <link type="text/css" href={{site.javascript_path | append:'jquery-ui/css/custom-theme/jquery-ui-1.8.18.custom.css'}} rel="stylesheet" />
 	<script type="text/javascript" src={{site.javascript_path | append:'jquery-ui/js/jquery-1.7.1.min.js' }}></script>
 	<script type="text/javascript" src={{site.javascript_path | append:'jquery-ui/js/jquery-ui-1.8.18.custom.min.js'}}></script>
 	<script type="text/javascript">
 			$(function(){
 				// Accordion
-				$("#accordion").accordion({ header: "h3",collapsible: true });
+				$("#accordion").accordion({ header: "h3",collapsible: true, autoHeight: false,animated: 'bounceslide',active: false  });
 				$( "a.expand" ).button({ icons: {primary:'ui-icon-triangle-1-s'} });
-				/*$( "button.expand" ).click(function(){
-					$( "button.expand" ).eq(0).prev().css('height','auto');
-					});
-				var clickAccordion = $( ".expand" ).accordion({ event: 'click' });
-
-				
-				//getter
-				var autoHeight = $( "#accordion").accordion( "option", "autoHeight" );
-				//setter
-				$( "#accordion").accordion( "option", "autoHeight", false );	
-				textNode = $("#accordion").find('.ui-state-active').siblings().find('.main-content-text')		*/
+				$("#post-menu h4").click(function() {
+				$(this).next().toggle();
+				return false;
+				}).next().hide();
+				$('#post-menu-list li:nth-child(odd)').addClass('alternate');
 			});
 	</script>
     <title>
@@ -55,17 +49,17 @@
               <h2>
                 <span class='align'>Archives</span>
               </h2><span class='side-underline-header'> </span>
-            </div>
-			  <ul id='archives'>
-				<li><a href='http://raghu-shenoy.github.com/archives/javascript.html'>Make my web page Dance</a>
-                </li>
-                <li><a href='http://raghu-shenoy.github.com/archives/htmlcss.html'>Hyper Text Markup(Moody???) Language</a>
-                </li>
-                <li><a href='http://raghu-shenoy.github.com/archives/git.html'>GIT - I am not abusing, I am distributing.</a>
-                </li>
-                <li><a href='http://raghu-shenoy.github.com/archives/lochness.html'>The fabled Black-Ness Monster</a>
-                </li>
-             </ul>
+            </div>				
+			<div id="post-menu">
+				<h4><a href="#">2012</a></h4>		
+				<div class='post-menu-content'>		
+					<ul id='post-menu-list'>
+						{% for post in site.posts %}			
+							<li><a href={{post.url}}>{{post.heading}}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
           </div>
 		  <div id='main-content'>
 			{{content}}
@@ -91,3 +85,4 @@
     </div>
   </body>
 </html>
+
