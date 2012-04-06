@@ -225,6 +225,7 @@ span.blog-date{
 }
 
 .blog-header .blog-date{
-	margin-left: 300px;
+	float: right;
+    margin: 5px 0;
 }
 
