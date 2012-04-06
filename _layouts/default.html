@@ -12,11 +12,10 @@
 				// Accordion
 				$("#accordion").accordion({ header: "h4",collapsible: true, autoHeight: false,animated: 'bounceslide',active: false  });
 				$( "a.expand" ).button({ icons: {primary:'ui-icon-triangle-1-s'} });
-				$("#post-menu h4").click(function() {
+				$("#post-menu h5").click(function() {
 				$(this).next().toggle();
 				return false;
 				}).next().hide();
-				$('#post-menu-list li:nth-child(odd)').addClass('alternate');
 			});
 
 		  var _gaq = _gaq || [];

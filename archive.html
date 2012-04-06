@@ -4,11 +4,12 @@ title: bloGIT
 ---
  
  <div id="accordion">
-	{% for post in site.posts %}
+	{% for post in site.posts limit: 5%}
 		<div class='blog-snippet'>
 			<h4><a href="#">{{post.heading}}</a></h4>
 			<div>
 				<div class='main-content-text'>
+					<span class='blog-date'>{{ post.date | date:"%Y-%m-%d" }}</span>
 					{{post.content}}				
 				</div>				
 				<a class='expand' href={{post.url}}>More</a>
@@ -16,3 +17,5 @@ title: bloGIT
 		</div>		
 	{% endfor %}
 </div>
+
+

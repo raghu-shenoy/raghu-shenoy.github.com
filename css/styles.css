@@ -1,11 +1,11 @@
 body{
     background: none repeat scroll 0 0 #1D1D1D;
-    color: #5D5D5D;
+    color: black;
     font: 14px sans-serif;
     margin-top: 30px;
 }
 
-body h1,h2,h3{
+body h1,h2,h3,h4,h5,h6{
 	margin:0;
 	padding:0;
 }
@@ -88,13 +88,13 @@ div#post-content{
 div#post-content div#side-content{
     float: left;
     min-height: 500px;
-    width: 250px;
+    width: 200px;
 }
 
 div#post-content div#main-content{
     float: left;
     margin: 0 10px 0 25px;
-    width: 600px;
+    width: 650px;
 }
 
 div#post-content div#main-content div.main-content-header{
@@ -122,12 +122,20 @@ div#post-content div#main-content div.main-content-text{
     height: 330px;
     line-height: 2em;
     overflow: hidden;
-    width: 525px;
+    width: 575px;
+}
+
+div#post-content div#side-content div.side-content-header{
+	float: left;
+    width: 200px;
 }
 
 div#post-content div#side-content div.side-content-header span.align{
+    color: black;
     float: left;
-    margin: 5px 0 0 20px;
+    font-family: comic Sans MS;
+    font-size: 20px;
+    margin: 0 0 0 20px;
 }
 
 div#post-content div#side-content div.side-content-header span.side-underline-header{
@@ -136,13 +144,6 @@ div#post-content div#side-content div.side-content-header span.side-underline-he
     float: left;
     height: 10px;
     width: 250px;
-}
-
-div#post-content div#side-content div.side-content-header{
-    background: none repeat scroll 0 0 yellow;
-    border-radius: 10px 10px 10px 10px;
-    color: black;
-    height: 40px;
 }
 
 div#post-content div#side-content div#about-me{
@@ -169,7 +170,7 @@ div#disqus-content{
 
 .expand{
 	font-size: 10px !important;
-	margin: 8px 0 0 220px;
+	margin: 8px 0 0 250px;
 }
 
 .post-menu-content{
@@ -199,3 +200,31 @@ ul#post-menu-list li a{
 }
 h3.accordion-header{
 }
+
+div#post-menu{
+	float: left;
+	margin:10px 0 0 20px;
+}
+
+
+div#post-menu a{
+	color: black;
+}
+
+span.blog-date{
+	font-style: italic;
+    margin-left: 510px;
+}
+
+.blog-header{
+	margin: 5px 0 15px 0;
+}
+
+.blog-header .blog-description{
+	font-size: 18px;	
+}
+
+.blog-header .blog-date{
+	margin-left: 300px;
+}
+
